@@ -7,7 +7,7 @@
 // ============================================
 // 1. THREE.JS - 3D INTERACTIVE BACKGROUND
 // ============================================
-(function initHeroScene() {"
+(function initHeroScene() {
   const canvas = document.getElementById('heroCanvas');
   if (!canvas) return;
 
@@ -74,9 +74,9 @@
 
     const iceGroup = new THREE.Group();
     const iceCubes = [];
-    const colors = [0x38bdf8, 0xffffff, 0x1e3a8a];
+    const customColors = [0x38bdf8, 0xffffff, 0x1e3a8a];
     for (let i = 0; i < 10; i++) {
-      const cube = createIceBlock(colors[i % colors.length]);
+      const cube = createIceBlock(customColors[i % customColors.length]);
       cube.position.set((Math.random() - 0.5) * 22, (Math.random() - 0.5) * 15, (Math.random() - 0.5) * 15 - 5);
       cube.rotation.set(Math.random() * Math.PI, Math.random() * Math.PI, 0);
       iceGroup.add(cube);
